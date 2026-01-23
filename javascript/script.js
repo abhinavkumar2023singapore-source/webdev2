@@ -1,9 +1,24 @@
-let obj = {
-    name: "Alice",
-    age: "12",
-    addresss: "Wonderland"
+/*var a = 212
+let b = 34;
+
+console.log(a)
+console.log(b)
+
+function print (){
+    c= 40 
+    console.log(c)
 }
+*/
 
-console.log(obj);
+// console.log ("this is  the begining of the code")
 
-obj.age = 20;
+let value = 0;
+
+let interval = setInterval(() => {
+    console.log(value);
+    value++;
+
+    if (value > 10) {
+        clearInterval(interval);
+    }
+}, 1000);
