@@ -77,7 +77,7 @@ setTimeout(() => {
 }, 2000); // homework time
 */
 
-function finishHomework(callback) {
+/*function finishHomework(callback) {
     console.log("Starting homework...");
     setTimeout(() => {
         console.log("Homework done!");
@@ -101,3 +101,45 @@ finishHomework(() => {
         goToPlayground();
     });
 });
+*/
+/*
+function doHomework() {
+    const p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let done = true; // Simulate homework completion
+            if (done) {
+                console.log("Homework completed!");
+                resolve("homework done");
+            } else {
+                reject("Homework not completed");
+            }
+        }, 2000)
+    });
+    return p;
+}
+
+function eatDinner() {
+    const p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let done = true; // Simulate dinner completion 
+            if (done) {
+                console.log("Dinner completed!");
+                resolve("dinner done");
+            } else {
+
+                reject("Dinner not completed");
+            }
+
+        }, 1500);
+    });
+    return p;
+}
+*/
+console.log("First Line")
+const p = new Promise((resolve, reject) => {
+    resolve("Promise resolved")
+})
+p.then(() => {
+    console.log("Inside Promise:")
+})
+console.log("Last Line")
