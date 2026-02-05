@@ -135,7 +135,11 @@ function eatDinner() {
     return p;
 }
 */
+/*
 console.log("First Line")
+setTimeout(() => {
+    console.log("Inside setTimeout")
+}, 0);
 const p = new Promise((resolve, reject) => {
     resolve("Promise resolved")
 })
@@ -143,3 +147,42 @@ p.then(() => {
     console.log("Inside Promise:")
 })
 console.log("Last Line")
+*/
+
+
+function orderFood() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Food Ordered");
+            resolve("");
+        }, 2000);
+    });
+}
+
+function prepareFood() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Food Prepared");
+            resolve("");
+            // reject("order cancelled")
+        }, 2000);
+    });
+}
+
+function deliverFood() {
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            console.log("Food Delivered");
+            resolve("");
+        }, 2000);
+    });
+
+
+    async function FoodOrder() {
+        await orderFood();
+        await prepareFood();
+        await deliverFood();
+        console.log("Enjoy your food !")
+    }
+    FoodOrder()
